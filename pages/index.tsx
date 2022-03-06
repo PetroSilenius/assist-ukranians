@@ -11,8 +11,8 @@ const Home = () => {
   return (
     <div className="px-8">
       <Head>
-        <title>{t?.main_heading}</title>
-        <meta name="description" content={t?.main_description} />
+        <title>{t.main_heading}</title>
+        <meta name="description" content={t.main_description} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -21,9 +21,9 @@ const Home = () => {
       </header>
 
       <main className="min-h-screen flex flex-1 justify-center items-center py-16 flex-col">
-        <h1 className="m-0 text-6xl text-center">{t?.main_heading}🇺🇦</h1>
+        <h1 className="m-0 text-6xl text-center">{t.main_heading}🇺🇦</h1>
 
-        <p className="my-16 text-2xl">{t?.main_description}</p>
+        <p className="my-16 text-2xl">{t.main_description}</p>
 
         <div className="flex items-center justify-center flex-wrap max-w-3xl">
           <Card
