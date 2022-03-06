@@ -51,20 +51,16 @@ export const LanguageSelector = () => {
       {menuOpen && (
         <ul
           className="origin-top-right absolute right-0 mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
-          role="menu"
           id="menu"
-          aria-orientation="vertical"
           aria-labelledby="menu-button"
-          tabIndex={-1}
         >
           {locales?.map((locale) => (
-            <li key={locale} role="none">
+            <li key={locale}>
               <a
                 className={`text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100 hover:text-gray-900 active:bg-gray-100 active:text-gray-900 ${
                   locale === currentLocale ? "bg-gray-100" : " cursor-pointer"
                 }`}
-                role="menuitem"
-                tabIndex={-1}
+                href="#"
                 id={`menu-item-${locale}`}
                 onClick={() =>
                   router.push({ pathname, query }, asPath, {
