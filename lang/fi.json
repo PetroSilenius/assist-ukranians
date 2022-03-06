@@ -3,5 +3,20 @@
     "main_description": "Sivusto tiedon saamiseen Ukrainan tukemisesta sekä avun hakemisesta",
     "change_language": "Vaihda kieltä",
     "fi": "Suomi",
-    "en": "Englanti"
+    "en": "Englanti",
+    "give_help": "Anna apua",
+    "seek_help": "Etsi tukea",
+    "help": "Auta",
+    "seek": "Etsi",
+    "shelter": "Majoitus",
+    "donations": "Lahjoitukset",
+    "basic_necessities": "Perustarpeet",
+    "unicef": "UNICEF",
+    "unicef_description": "Hengenpelastustukea lapsille ja heidän perheilleen",
+    "red_cross_ua": "Red Cross Ukraina",
+    "red_cross_ua_description": "Toimii katastrofien hallinnassa, terveydenhuollossa ja jäljityspalvelussa",
+    "prykhystok": "ПPИXИCTOK",
+    "prykhystok_description": "Yhdistää majapaikkoja ja apua tarvitsevia ihmisiä",
+    "first_aid": "Ensiapu",
+    "first_aid_description": "Telegram botti, joka antaa ensiapu-ohjeita"
 }

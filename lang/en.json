@@ -3,5 +3,20 @@
     "main_description": "A site for getting information on how to support Ukraine or seek help",
     "change_language": "Change language",
     "fi": "Finnish",
-    "en": "English"
+    "en": "English",
+    "give_help": "Give help",
+    "seek_help": "Seek help",
+    "help": "Help",
+    "seek": "Seek",
+    "shelter": "Shelter",
+    "donations": "Donations",
+    "basic_necessities": "Basic necessities",
+    "unicef": "UNICEF",
+    "unicef_description": "Life-saving support for children and their families.",
+    "red_cross_ua": "Red Cross Ukraine",
+    "red_cross_ua_description": "Operates in disaster management, health and care, tracing service",
+    "prykhystok": "ПPИXИCTOK",
+    "prykhystok_description": "Connects shelter with people in need",
+    "first_aid": "First aid",
+    "first_aid_description": "Telegram bot that provides first aid guidance"
 }
