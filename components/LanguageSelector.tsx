@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
 import useOnClickOutside from "hooks/useOnClickOutside";
 import { useTranslation } from "hooks/useTranslation";
@@ -14,7 +14,10 @@ export const LanguageSelector = () => {
   const ref = useRef<HTMLDivElement>(null);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  useOnClickOutside(ref, () => setMenuOpen(false));
+  useOnClickOutside(
+    ref,
+    useCallback(() => setMenuOpen(false), [])
+  );
 
   useEffect(() => {
     if (router.locale && menuOpen) {
