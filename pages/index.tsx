@@ -13,7 +13,6 @@ const Home = () => {
       <Head>
         <title>{t.main_heading}</title>
         <meta name="description" content={t.main_description} />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <header className="m-2 flex flex-row-reverse">
