@@ -6,6 +6,10 @@ The site crowdsources managing listed causes, translating the site and developin
 
 ## Crowdsourcing 👥
 
+The project relies on the community to maintain the project and develop it further. You can take part here in Github, by sharing the site or if you want to be more involved you can contact the maintainers✌🏻
+
+The context and plans of the site are explained in [the Figjam file](https://www.figma.com/file/iOKKfVYC4YMgrUfDyewCYN/Support-ukraine?node-id=0%3A1) which is used for collaborating on the project. The Figjam file is open for comments!
+
 ### Adding a new cause to the site
 
 Add a new object to either [give_causes.json](data/give_causes.json) or [seek_causes.json](data/seek_causes.json) depending on who the cause is meant for.
