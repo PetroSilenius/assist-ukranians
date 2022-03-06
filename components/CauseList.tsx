@@ -2,9 +2,7 @@ import { useState } from "react";
 import CauseCard from "components/CauseCard";
 import { useTranslation } from "hooks/useTranslation";
 
-export const CauseList = <
-  T extends { [key: string]: { [key: string]: string }[] }
->({
+export const CauseList = <T extends { [key: string]: Cause[] }>({
   causes,
   type,
 }: {
@@ -46,13 +44,7 @@ export const CauseList = <
         })}
       </div>
       {causes[selectedCategory].map((cause) => (
-        <CauseCard
-          key={cause.name}
-          href={cause.link}
-          name={cause.name}
-          description={cause.description}
-          type={type}
-        />
+        <CauseCard key={cause.nameId} cause={cause} type={type} />
       ))}
     </div>
   );
