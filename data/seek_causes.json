@@ -1,15 +1,15 @@
 {
     "shelter": [
         {
-            "name": "prykhystok",
-            "description": "prykhystok_description",
+            "nameId": "prykhystok",
+            "descriptionId": "prykhystok_description",
             "link": "https://prykhystok.in.ua/find"
         }
     ],
     "basic_necessities": [
         {
-            "name": "first_aid",
-            "description": "first_aid_description",
+            "nameId": "first_aid",
+            "descriptionId": "first_aid_description",
             "link": "https://t.me/FirstAidRobot"
         }
     ]

@@ -1,34 +1,69 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Support ukraine 🇺🇦
 
-## Getting Started
+This is a site for getting information on how to provide support for Ukraine or seek help as a person affected by the war.
 
-First, run the development server:
+The site crowdsources managing listed causes, translating the site and developing it further.
+
+## Crowdsourcing 👥
+
+### Adding a new cause to the site
+
+Add a new object to either [give_causes.json](data/give_causes.json) or [seek_causes.json](data/seek_causes.json) depending on who the cause is meant for.
+
+`nameId` is used in translation files for defining that causes name. `descriptionId` is used to define a one or two sentence explanation of the cause. `link` is a direct link to the cause.
+
+Add translations for the cause `nameId` and `descriptionId` by adding text content for each present translation file in [lang](lang) folder.
+
+### Adding a new language to the site
+
+Add a new locale to [next.config.js](next.config.js). The locale format [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) should be used.
+
+Add a `json` file with the name of the locale to [lang](lang). Copy the `json` content from [en.json](lang/en.json) and translate the text content for the new language.
+
+## Tech Stack 💻
+
+The application is built with [TypeScript](https://www.typescriptlang.org/), [React](https://reactjs.org/) and [Next.js](https://nextjs.org/).
+
+The user interface of the application is styled using [tailwindcss](https://tailwindcss.com/).
+
+The data is stored in json files under [data](data) and [lang](lang). This allows saving the data in a transparent way compared to a CMS or database. It also allows collaboration on those data sources without much prerequisites.
+
+## How to run
+
+### Installation
+
+Clone the repository
 
 ```bash
-npm run dev
-# or
-yarn dev
+  git clone https://github.com/PetroSilenius/support-ukraine
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Change to the project directory
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```bash
+  cd support-ukraine
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### Application
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Install project dependencies based on lockfile
 
-## Learn More
+```bash
+  npm ci
+```
 
-To learn more about Next.js, take a look at the following resources:
+Run the development server
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+  npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Open http://localhost:3000 with your browser to see the result.
 
-## Deploy on Vercel
+### Linting
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Run linter on all files
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```bash
+  npm run lint
+```

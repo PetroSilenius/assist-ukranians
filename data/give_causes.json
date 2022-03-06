@@ -1,20 +1,20 @@
 {
     "donations": [
         {
-            "name": "unicef",
-            "description": "unicef_description",
+            "nameId": "unicef",
+            "descriptionId": "unicef_description",
             "link": "https://help.unicef.org/ukraine-emergency"
         },
         {
-            "name": "red_cross_ua",
-            "description": "red_cross_ua_description",
+            "nameId": "red_cross_ua",
+            "descriptionId": "red_cross_ua_description",
             "link": "https://redcross.org.ua/en/donate"
         }
     ],
     "shelter": [
         {
-            "name": "prykhystok",
-            "description": "prykhystok_description",
+            "nameId": "prykhystok",
+            "descriptionId": "prykhystok_description",
             "link": "https://prykhystok.in.ua/create"
         }
     ]
