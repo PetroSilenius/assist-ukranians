@@ -11,7 +11,6 @@ const Give = () => {
     <>
       <Head>
         <title>{`${t.give_help} - ${t.main_heading}`}</title>
-        <meta name="description" content={t.main_description} />
       </Head>
 
       <main className="min-h-screen flex flex-1 justify-center items-center py-16 flex-col">
