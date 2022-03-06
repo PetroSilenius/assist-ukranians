@@ -3,6 +3,9 @@ import { useRouter } from "next/router";
 import useOnClickOutside from "hooks/useOnClickOutside";
 import { useTranslation } from "hooks/useTranslation";
 
+// Inspired by: tailwindUI Dropdown component
+// https://tailwindui.com/components/application-ui/elements/dropdowns
+
 export const LanguageSelector = () => {
   const t = useTranslation();
   const router = useRouter();
