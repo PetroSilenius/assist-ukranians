@@ -2,6 +2,7 @@ import type { GetStaticProps } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import Card from "components/Card";
+import LanguageSelector from "components/LanguageSelector";
 import { useTranslation } from "TranslationContext";
 
 const Home = () => {
@@ -14,6 +15,10 @@ const Home = () => {
         <meta name="description" content={t?.main_description} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <header className="m-2 flex flex-row-reverse">
+        <LanguageSelector />
+      </header>
 
       <main className="min-h-screen flex flex-1 justify-center items-center py-16 flex-col">
         <h1 className="m-0 text-6xl text-center">{t?.main_heading}🇺🇦</h1>
