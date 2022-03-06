@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
 import useOnClickOutside from "hooks/useOnClickOutside";
-import { useTranslation } from "TranslationContext";
+import { useTranslation } from "hooks/useTranslation";
 
 export const LanguageSelector = () => {
   const t = useTranslation();

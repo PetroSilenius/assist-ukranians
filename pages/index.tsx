@@ -3,7 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Card from "components/Card";
 import LanguageSelector from "components/LanguageSelector";
-import { useTranslation } from "TranslationContext";
+import { useTranslation } from "hooks/useTranslation";
 
 const Home = () => {
   const t = useTranslation();
