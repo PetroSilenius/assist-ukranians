@@ -40,12 +40,12 @@ export const CauseList = <
                 checked={checked}
                 onChange={() => setSelectedCategory(categoryAsString)}
               />
-              {t?.[categoryAsString]}
+              {t[categoryAsString]}
             </label>
           );
         })}
       </div>
-      {causes?.[selectedCategory]?.map((cause) => (
+      {causes[selectedCategory].map((cause) => (
         <CauseCard
           key={cause.name}
           href={cause.link}
