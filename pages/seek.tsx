@@ -3,7 +3,7 @@ import { useTranslation } from "hooks/useTranslation";
 import seekCauses from "data/seek_causes.json";
 import CauseList from "components/CauseList";
 import { doc, getDoc } from "firebase/firestore";
-import { db } from "db";
+import db from "firestore";
 
 const Seek = ({ reactions }: { reactions: number[] }) => {
   const t = useTranslation();

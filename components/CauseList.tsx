@@ -3,7 +3,7 @@ import CauseCard from "components/CauseCard";
 import { useTranslation } from "hooks/useTranslation";
 import { doc } from "firebase/firestore";
 import { useDocumentData } from "react-firebase-hooks/firestore";
-import { db } from "db";
+import db from "firestore";
 
 export const CauseList = <T extends { [key: string]: Cause[] }>({
   causes,
