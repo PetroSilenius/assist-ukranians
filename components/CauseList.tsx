@@ -1,22 +1,40 @@
 import { useState } from "react";
 import CauseCard from "components/CauseCard";
 import { useTranslation } from "hooks/useTranslation";
+import { doc } from "firebase/firestore";
+import { useDocumentData } from "react-firebase-hooks/firestore";
+import { db } from "db";
 
 export const CauseList = <T extends { [key: string]: Cause[] }>({
   causes,
   type,
+  reactions,
 }: {
   causes: T;
   type: "help" | "seek";
+  reactions: number[];
 }) => {
-  type Category = keyof typeof causes;
+  const t = useTranslation();
 
+  type Category = keyof typeof causes;
   const categories = Object.keys(causes) as Category[];
   const [selectedCategory, setSelectedCategory] = useState<Category>(
     categories[0]
   );
 
-  const t = useTranslation();
+  const documentRef = doc(
+    db,
+    "reactions",
+    type === "help" ? "giveCauses" : "seekCauses"
+  );
+  const [value, loading] = useDocumentData(documentRef);
+
+  // Handmade prefetching
+  const reactionValues = loading ? reactions : value;
+
+  const categoryCauses = causes[selectedCategory].sort(
+    (a, b) => reactionValues?.[b.nameId] - reactionValues?.[a.nameId]
+  );
 
   return (
     <div className="flex flex-col w-full max-w-3xl">
@@ -43,8 +61,14 @@ export const CauseList = <T extends { [key: string]: Cause[] }>({
           );
         })}
       </div>
-      {causes[selectedCategory].map((cause) => (
-        <CauseCard key={cause.nameId} cause={cause} type={type} />
+      {categoryCauses.map((cause) => (
+        <CauseCard
+          key={cause.nameId}
+          cause={cause}
+          type={type}
+          reactionsAmount={reactionValues?.[cause.nameId]}
+          documentRef={documentRef}
+        />
       ))}
     </div>
   );
