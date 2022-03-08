@@ -1,7 +1,7 @@
 import { useState } from "react";
 import CauseCard from "components/CauseCard";
 import { useTranslation } from "hooks/useTranslation";
-import { doc } from "firebase/firestore";
+import { doc, onSnapshot } from "firebase/firestore";
 import { useDocumentData } from "react-firebase-hooks/firestore";
 import db from "firestore";
 

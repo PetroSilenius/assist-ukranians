@@ -21,7 +21,7 @@ export const CauseCard = ({
 
   const handleClick = () => {
     setButtonDisabled(true);
-    updateDoc(documentRef, { [cause.nameId]: reactionsAmount + 1 || 1 });
+    updateDoc(documentRef, { [nameId]: reactionsAmount + 1 || 1 });
   };
 
   return (
@@ -43,7 +43,7 @@ export const CauseCard = ({
       <button
         disabled={buttonDisabled}
         onClick={handleClick}
-        className="text-3xl ml-2 mr-1 w-10 h-10 rounded-full transition hover:bg-yellow-100 hover:scale-90 active:bg-yellow-200 active:scale-125 disabled:bg-slate-300"
+        className="text-3xl contrast-75 ml-2 mr-1 w-10 h-10 rounded-full transition hover:bg-yellow-100 hover:scale-90 hover:contrast-100 active:bg-yellow-200 active:scale-125 disabled:contrast-125"
       >
         💡
       </button>
