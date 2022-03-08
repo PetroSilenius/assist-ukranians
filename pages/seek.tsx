@@ -25,12 +25,7 @@ const Seek = ({ reactions }: { reactions: number[] }) => {
 export const getServerSideProps = async () => {
   const docRef = doc(db, "reactions", "seekCauses");
   const docSnap = await getDoc(docRef);
-  if (!docSnap.exists()) {
-    return {
-      notFound: true,
-    };
-  }
-  const data = docSnap.data();
+  const data = docSnap.exists() ? docSnap.data() : {};
   return {
     props: {
       reactions: data,
