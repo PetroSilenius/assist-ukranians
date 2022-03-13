@@ -9,13 +9,40 @@
             "nameId": "red_cross_ua",
             "descriptionId": "red_cross_ua_description",
             "link": "https://redcross.org.ua/en/donate"
+        },
+        {
+            "nameId": "army_ukraine",
+            "descriptionId": "army_ukraine_description",
+            "link": "https://bank.gov.ua/en/news/all/natsionalniy-bank-vidkriv-spetsrahunok-dlya-zboru-koshtiv-na-potrebi-armiyi"
+        },
+        {
+            "nameId": "humanitarian_assistance",
+            "descriptionId": "humanitarian_assistance_description",
+            "link": "https://bank.gov.ua/en/news/all/natsionalniy-bank-vidkriv-rahunok-dlya-gumanitarnoyi-dopomogi-ukrayintsyam-postrajdalim-vid-rosiyskoyi-agresiyi"
         }
     ],
     "shelter": [
         {
+            "nameId": "airbnb",
+            "descriptionId": "airbnb_description",
+            "link": "https://www.airbnb.com/for-airbnb-org/how-to-host"
+        },
+        {
             "nameId": "prykhystok",
             "descriptionId": "prykhystok_description",
             "link": "https://prykhystok.in.ua/create"
+        }
+    ],
+    "activities": [
+        {
+            "nameId": "sucho",
+            "descriptionId": "sucho_description",
+            "link": "https://www.sucho.org/"
+        },
+        {
+            "nameId": "hire_ukrainian",
+            "descriptionId": "hire_ukrainian_description",
+            "link": "https://hireforukraine.org/"
         }
     ]
 }
