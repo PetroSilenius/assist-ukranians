@@ -28,12 +28,14 @@ function MyApp({ Component, pageProps, router }: AppProps) {
             )}
           </div>
           <div>
-            <LinkButton
-              href="https://forms.gle/1Uy4vwChDVUeRpSx6"
-              text={"Suggest"}
-              dense={false}
-              props={{ rel: "noopener noreferrer", target: "_blank" }}
-            />
+            {router.asPath !== "/" && (
+              <LinkButton
+                href="https://forms.gle/1Uy4vwChDVUeRpSx6"
+                text={"Suggest"}
+                dense={false}
+                props={{ rel: "noopener noreferrer", target: "_blank" }}
+              />
+            )}
             <LanguageSelector />
           </div>
         </header>
