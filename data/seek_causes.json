@@ -6,7 +6,7 @@
             "link": "https://helppeopleleaveukraine.org/"
         },
         {
-            "nameid": "trainline",
+            "nameId": "trainline",
             "descriptionId": "trainline_description",
             "link": "https://www.thetrainline.com/trains/ukraine-travel-advice"
         }

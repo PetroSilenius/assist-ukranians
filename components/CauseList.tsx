@@ -45,9 +45,14 @@ export const CauseList = <T extends { [key: string]: Cause[] }>({
     categoryCauses.push(...causes[category]);
   });
 
-  categoryCauses.sort(
-    (a, b) => reactionValues?.[b.nameId] - reactionValues?.[a.nameId]
-  );
+  categoryCauses.sort((a, b) => {
+    const aReaction = reactionValues?.[a.nameId] ?? 0;
+    const bReaction = reactionValues?.[b.nameId] ?? 0;
+
+    if (aReaction < bReaction) return 1;
+    else if (aReaction > bReaction) return -1;
+    else return 0;
+  });
 
   return (
     <div className="flex flex-col w-full max-w-3xl">
