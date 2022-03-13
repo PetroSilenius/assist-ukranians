@@ -1,7 +1,8 @@
 import type { GetStaticProps } from "next";
 import Head from "next/head";
-import Card from "components/Card";
+import Link from "next/link";
 import { useTranslation } from "hooks/useTranslation";
+import { LinkButton } from "components/LinkButton";
 
 const Home = () => {
   const t = useTranslation();
@@ -12,25 +13,33 @@ const Home = () => {
         <title>{t.main_heading}</title>
       </Head>
 
-      <main className="min-h-screen flex flex-1 justify-center items-center py-16 flex-col">
-        <h1 className="m-0 text-6xl text-center">{t.main_heading}🇺🇦</h1>
+      <main className="flex flex-1 justify-center items-center py-16 flex-col">
+        <p className="text-8xl">🇺🇦</p>
+        <h1 className="m-0 text-4xl text-center">{t.main_heading}</h1>
 
-        <p className="my-16 text-2xl">{t.main_description}</p>
+        <div className="mt-16 mb-12">
+          <p className="text-center">{t.main_description}</p>
+          <p className="mt-6 text-center">{t.main_description2}</p>
+        </div>
 
-        <div className="flex items-center justify-center flex-wrap max-w-3xl">
-          <Card href="/give" heading={t.give_help} />
-          <Card href="/seek" heading={t.seek_help} />
+        <div className="flex flex-col items-center justify-center flex-wrap max-w-3xl">
+          <Link href="/seek" passHref>
+            <LinkButton text={t.seek_help} />
+          </Link>
+          <Link href="/give" passHref>
+            <LinkButton text={t.give_help} />
+          </Link>
         </div>
       </main>
 
-      <footer className="flex py-8 justify-center items-center border-t border-slate-300">
+      <footer className="flex py-8 justify-center items-center">
         <a
-          href="https://github.com/PetroSilenius/support-ukraine"
+          href="https://github.com/PetroSilenius/support-ukraine#readme"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex justify-center items-center flex-grow text-slate-700"
+          className="text-blue-300 underline"
         >
-          Powered by the community
+          What&apos;s this about?
         </a>
       </footer>
     </>
