@@ -1,9 +1,31 @@
 {
+    "transport": [
+        {
+            "nameId": "helppeopleleave",
+            "descriptionId": "helppeopleleave_description",
+            "link": "https://helppeopleleaveukraine.org/"
+        },
+        {
+            "nameId": "trainline",
+            "descriptionId": "trainline_description",
+            "link": "https://www.thetrainline.com/trains/ukraine-travel-advice"
+        }
+    ],
     "shelter": [
+        {
+            "nameId": "airbnb",
+            "descriptionId": "airbnb_description",
+            "link": "https://www.airbnb.com/help/article/1950"
+        },
         {
             "nameId": "prykhystok",
             "descriptionId": "prykhystok_description",
             "link": "https://prykhystok.in.ua/find"
+        },
+        {
+            "nameId": "icanhelp_host",
+            "descriptionId": "icanhelp_host_description",
+            "link": "https://icanhelp.host/"
         }
     ],
     "necessities": [
@@ -11,6 +33,11 @@
             "nameId": "first_aid",
             "descriptionId": "first_aid_description",
             "link": "https://t.me/FirstAidRobot"
+        },
+        {
+            "nameId": "hire_ukrainian",
+            "descriptionId": "hire_ukrainian_description",
+            "link": "https://hireforukraine.org/"
         }
     ]
 }

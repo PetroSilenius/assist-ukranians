@@ -14,7 +14,7 @@ export const LinkButton = forwardRef<HTMLAnchorElement, LinkButtonProps>(
         href={href}
         ref={ref}
         className={`w-60 my-4 py-2 px-4 text-center text-primary-dark rounded-full bg-sky-300 ${
-          dense ? "text-lg font-bold" : ""
+          dense ? "text-lg font-semibold" : ""
         }`}
         {...props}
       >

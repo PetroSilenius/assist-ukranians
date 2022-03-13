@@ -15,9 +15,9 @@ const Home = () => {
 
       <main className="flex flex-1 justify-center items-center py-16 flex-col">
         <p className="text-8xl">🇺🇦</p>
-        <h1 className="m-0 text-4xl text-center">{t.main_heading}</h1>
+        <h1 className="mt-2 text-5xl text-center">{t.main_heading}</h1>
 
-        <div className="mt-16 mb-12">
+        <div className="my-12">
           <p className="text-center">{t.main_description}</p>
           <p className="mt-6 text-center">{t.main_description2}</p>
         </div>
