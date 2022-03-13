@@ -26,7 +26,7 @@ export const LanguageSelector = () => {
   }, [router]);
 
   return (
-    <div className="relative inline-block text-left" ref={ref}>
+    <div className="relative inline-block text-left ml-4" ref={ref}>
       <div>
         <button
           type="button"
@@ -37,7 +37,7 @@ export const LanguageSelector = () => {
           aria-controls="menu"
           onClick={() => setMenuOpen(!menuOpen)}
         >
-          {t.change_language}
+          {t?.[currentLocale as string]}
           <svg
             className="-mr-1 ml-2 h-5 w-5"
             xmlns="http://www.w3.org/2000/svg"
@@ -56,28 +56,30 @@ export const LanguageSelector = () => {
 
       {menuOpen && (
         <ul
-          className="origin-top-right absolute right-0 mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+          className="w-full origin-top-right absolute right-0 mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
           id="menu"
           aria-labelledby="menu-button"
         >
-          {locales?.map((locale) => (
-            <li key={locale}>
-              <a
-                className={`text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100 hover:text-gray-900 active:bg-gray-100 active:text-gray-900 ${
-                  locale === currentLocale ? "bg-gray-100" : " cursor-pointer"
-                }`}
-                href="#"
-                id={`menu-item-${locale}`}
-                onClick={() =>
-                  router.push({ pathname, query }, asPath, {
-                    locale: locale,
-                  })
-                }
-              >
-                {t[locale]}
-              </a>
-            </li>
-          ))}
+          {locales
+            ?.filter((locale) => locale !== currentLocale)
+            .map((locale) => (
+              <li key={locale}>
+                <a
+                  className={
+                    "text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100 hover:text-gray-900 active:bg-gray-100 active:text-gray-900 cursor-pointer rounded-full"
+                  }
+                  href="#"
+                  id={`menu-item-${locale}`}
+                  onClick={() =>
+                    router.push({ pathname, query }, asPath, {
+                      locale: locale,
+                    })
+                  }
+                >
+                  {t[locale]}
+                </a>
+              </li>
+            ))}
         </ul>
       )}
     </div>

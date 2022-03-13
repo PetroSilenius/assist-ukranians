@@ -14,8 +14,10 @@ const Seek = ({ reactions }: { reactions: number[] }) => {
         <title>{`${t.seek_help} - ${t.main_heading}`}</title>
       </Head>
 
-      <main className="min-h-screen flex flex-1 justify-center items-center py-16 flex-col">
-        <h1 className="m-0 text-6xl text-center">{t.seek_help}🇺🇦</h1>
+      <main className="flex flex-1 justify-center items-center py-16 flex-col">
+        <p className="text-8xl">🇺🇦</p>
+        <h1 className="m-0 text-5xl text-center">{t.seek_help}</h1>
+        <p className="mt-4 mb-12 text-center">{t.seek_description}</p>
         <CauseList causes={seekCauses} type="seek" reactions={reactions} />
       </main>
     </>

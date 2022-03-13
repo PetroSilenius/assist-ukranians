@@ -14,10 +14,12 @@ const Give = ({ reactions }: { reactions: number[] }) => {
         <title>{`${t.give_help} - ${t.main_heading}`}</title>
       </Head>
 
-      <main className="min-h-screen flex flex-1 justify-center items-center py-16 flex-col">
-        <h1 className="m-0 text-6xl text-center">{t.give_help}🇺🇦</h1>
+      <main className="flex flex-1 justify-center items-center py-16 flex-col">
+        <p className="text-8xl">🇺🇦</p>
+        <h1 className="m-0 text-5xl text-center">{t.give_help}</h1>
+        <p className="mt-4 mb-12 text-center">{t.give_description}</p>
 
-        <CauseList causes={giveCauses} type="help" reactions={reactions} />
+        <CauseList causes={giveCauses} type="give" reactions={reactions} />
       </main>
     </>
   );

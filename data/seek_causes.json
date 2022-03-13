@@ -6,7 +6,7 @@
             "link": "https://prykhystok.in.ua/find"
         }
     ],
-    "basic_necessities": [
+    "necessities": [
         {
             "nameId": "first_aid",
             "descriptionId": "first_aid_description",

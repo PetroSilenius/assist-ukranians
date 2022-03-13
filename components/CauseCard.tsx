@@ -4,12 +4,10 @@ import { updateDoc, DocumentReference } from "firebase/firestore";
 
 export const CauseCard = ({
   cause,
-  type,
   reactionsAmount,
   documentRef,
 }: {
   cause: Cause;
-  type: "help" | "seek";
   reactionsAmount: number;
   documentRef: DocumentReference;
 }) => {
@@ -25,29 +23,26 @@ export const CauseCard = ({
   };
 
   return (
-    <div className="flex items-center">
-      <div className="flex-1 flex justify-between items-center bg-slate-300 rounded-lg px-4 py-6 my-4">
-        <div>
-          <h1 className="text-2xl">{t[nameId]}</h1>
-          <p>{t[descriptionId]}</p>
-        </div>
-        <a
-          href={link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-white bg-sky-500 p-3 rounded-lg ml-2"
-        >
-          {t[type]}
-        </a>
-      </div>
-      <button
-        disabled={buttonDisabled}
-        onClick={handleClick}
-        className="text-3xl contrast-75 ml-2 mr-1 w-10 h-10 rounded-full transition hover:bg-yellow-100 hover:scale-90 hover:contrast-100 active:bg-yellow-200 active:scale-125 disabled:contrast-125"
+    <div className="flex items-center justify-between bg-slate-900 rounded-lg my-4">
+      <a
+        href={link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="w-full py-6 pl-4"
       >
-        💡
-      </button>
-      <span>{reactionsAmount}</span>
+        <h1 className="text-2xl">{t[nameId]}</h1>
+        <p>{t[descriptionId]}</p>
+      </a>
+      <div className="text-center pr-4">
+        <button
+          disabled={buttonDisabled}
+          onClick={handleClick}
+          className="text-3xl w-10 h-10 contrast-50 rounded-full transition hover:bg-yellow-100/75 hover:scale-90 hover:contrast-100 active:bg-yellow-200 active:scale-125 active:contrast-100 disabled:contrast-125 disabled:hover:bg-transparent disabled:hover:scale-100"
+        >
+          💡
+        </button>
+        <p className="text-center">{reactionsAmount}</p>
+      </div>
     </div>
   );
 };
