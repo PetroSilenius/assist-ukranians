@@ -31,7 +31,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
             {router.asPath !== "/" && (
               <LinkButton
                 href="https://forms.gle/1Uy4vwChDVUeRpSx6"
-                text={"Suggest"}
+                text={translation.suggest}
                 dense={false}
                 props={{ rel: "noopener noreferrer", target: "_blank" }}
               />
