@@ -39,7 +39,7 @@ const Home = () => {
           rel="noopener noreferrer"
           className="text-blue-300 underline"
         >
-          What&apos;s this about?
+          {t.about}
         </a>
       </footer>
     </>

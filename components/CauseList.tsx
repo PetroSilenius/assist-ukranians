@@ -56,7 +56,7 @@ export const CauseList = <T extends { [key: string]: Cause[] }>({
 
   return (
     <div className="flex flex-col w-full max-w-3xl">
-      <div className="flex justify-evenly sticky top-0 bg-primary-dark p-4 z-10">
+      <div className="flex justify-evenly sticky top-0 bg-primary-dark py-4 z-10">
         {categories.map((category) => {
           const categoryAsString = category as string;
           const checked = selectedCategories.includes(categoryAsString);
