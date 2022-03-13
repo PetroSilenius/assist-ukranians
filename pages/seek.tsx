@@ -16,8 +16,8 @@ const Seek = ({ reactions }: { reactions: number[] }) => {
 
       <main className="flex flex-1 justify-center items-center py-16 flex-col">
         <p className="text-8xl">🇺🇦</p>
-        <h1 className="m-0 text-5xl text-center">{t.seek_help}</h1>
-        <p className="mt-4 mb-12 text-center">{t.seek_description}</p>
+        <h1 className="mt-2 text-4xl text-center">{t.seek_help}</h1>
+        <p className="mt-2 mb-12 text-center">{t.seek_description}</p>
         <CauseList causes={seekCauses} type="seek" reactions={reactions} />
       </main>
     </>
