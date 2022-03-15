@@ -18,8 +18,7 @@ export const CauseList = <T extends { [key: string]: Cause[] }>({
 
   type Category = keyof typeof causes;
   const categories = Object.keys(causes) as Category[];
-  const [selectedCategories, setSelectedCategories] =
-    useState<Category[]>(categories);
+  const [selectedCategories, setSelectedCategories] = useState<Category[]>([]);
 
   const handleChecboxChange = (event: ChangeEvent) => {
     const { name } = event.target as HTMLInputElement;
@@ -41,7 +40,10 @@ export const CauseList = <T extends { [key: string]: Cause[] }>({
   const reactionValues = loading ? reactions : value;
 
   let categoryCauses: Cause[] = [];
-  selectedCategories.forEach((category) => {
+  const shownCategories = selectedCategories.length
+    ? selectedCategories
+    : categories;
+  shownCategories.forEach((category) => {
     categoryCauses.push(...causes[category]);
   });
 
