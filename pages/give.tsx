@@ -15,7 +15,7 @@ const Give = ({ reactions }: { reactions: number[] }) => {
         <title>{`${t.give_help} - ${t.main_heading}`}</title>
       </Head>
 
-      <main className="flex flex-1 justify-center items-center py-16 flex-col">
+      <main className="flex flex-1 items-center py-16 flex-col">
         <HeaderLogo />
         <h1 className="mt-6 text-4xl text-center">{t.give_help}</h1>
         <p className="mt-2 mb-12 text-center">{t.give_description}</p>
