@@ -4,6 +4,7 @@ import seekCauses from "data/seek_causes.json";
 import CauseList from "components/CauseList";
 import { doc, getDoc } from "firebase/firestore";
 import db from "firestore";
+import HeaderLogo from "components/HeaderLogo";
 
 const Seek = ({ reactions }: { reactions: number[] }) => {
   const t = useTranslation();
@@ -15,8 +16,8 @@ const Seek = ({ reactions }: { reactions: number[] }) => {
       </Head>
 
       <main className="flex flex-1 justify-center items-center py-16 flex-col">
-        <p className="text-8xl">🇺🇦</p>
-        <h1 className="mt-2 text-4xl text-center">{t.seek_help}</h1>
+        <HeaderLogo />
+        <h1 className="mt-6 text-4xl text-center">{t.seek_help}</h1>
         <p className="mt-2 mb-12 text-center">{t.seek_description}</p>
         <CauseList causes={seekCauses} type="seek" reactions={reactions} />
       </main>

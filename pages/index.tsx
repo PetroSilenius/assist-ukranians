@@ -3,6 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { useTranslation } from "hooks/useTranslation";
 import { LinkButton } from "components/LinkButton";
+import HeaderLogo from "components/HeaderLogo";
 
 const Home = () => {
   const t = useTranslation();
@@ -14,8 +15,8 @@ const Home = () => {
       </Head>
 
       <main className="flex flex-1 justify-center items-center py-16 flex-col">
-        <p className="text-8xl">🇺🇦</p>
-        <h1 className="mt-2 text-5xl text-center">{t.main_heading}</h1>
+        <HeaderLogo />
+        <h1 className="mt-8 text-5xl text-center">{t.main_heading}</h1>
 
         <div className="my-12">
           <p className="text-center">{t.main_description}</p>
