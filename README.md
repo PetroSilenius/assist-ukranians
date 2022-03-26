@@ -4,6 +4,8 @@ This is a site for getting information on how to give help to Ukrainians or seek
 
 The site crowdsources managing listed causes, translating the site and developing it further.
 
+![A screenshot of the assistukranians site showing list of resources for giving help](https://i.imgur.com/l3B2hZql.png)
+
 ## Crowdsourcing 👥
 
 The project relies on the community to maintain the project and develop it further. You can take part here in Github, by sharing the site or if you want to be more involved you can contact the maintainers✌🏻
