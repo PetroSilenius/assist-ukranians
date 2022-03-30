@@ -35,7 +35,7 @@ const Home = () => {
 
       <footer className="flex py-8 justify-center items-center">
         <a
-          href="https://github.com/PetroSilenius/assist-ukrainians#readme"
+          href="https://github.com/PetroSilenius/assist-ukranians#readme"
           target="_blank"
           rel="noopener noreferrer"
           className="text-blue-300 underline"
