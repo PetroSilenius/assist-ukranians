@@ -1,11 +1,12 @@
 {
     "main_heading": "Auta Ukrainalaisia",
-    "main_description": "Hae tietoa miten voit antaa apua Ukrainalaisille tai etsiä tukea",
+    "main_description": "Hae tietoa miten voit antaa apua ukrainalaisille tai etsiä tukea",
     "main_description2": "Yhteisön rakentama yhteisölle",
     "suggest": "Ehdota",
     "about": "Mistä on kyse?",
     "fi": "Suomi",
     "en": "Englanti",
+    "ru": "Venäjä",
     "give_help": "Anna apua",
     "give_description": "Etsi ja äänestä yhteisön mielestä hyödyllisimpiä kohteita",
     "seek_help": "Etsi tukea",
