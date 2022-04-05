@@ -34,7 +34,7 @@ Add a new locale to [next.config.js](next.config.js). The locale format [ISO 639
 
 Add a `json` file with the name of the locale to [lang](lang). Copy the `json` content from [en.json](lang/en.json) and translate the text content for the new language.
 
-The reaction counts are stored in Firebase [Firestore Database](https://cloud.google.com/firestore). The reactions are prefetched on server and refetched in the browser once a change to the database occurs.
+Add a translation for the new language to existing languages by using the locale format as the json key.
 
 ## Tech Stack 💻
 
@@ -43,6 +43,8 @@ The application is built with [TypeScript](https://www.typescriptlang.org/), [Re
 The user interface of the application is styled using [tailwindcss](https://tailwindcss.com/).
 
 The data is stored in json files under [data](data) and [lang](lang). This allows saving the data in a transparent way compared to a CMS or database. It also allows collaboration on those data sources without much prerequisites.
+
+The reaction counts are stored in Firebase [Firestore Database](https://cloud.google.com/firestore). The reactions are prefetched on server and refetched in the browser once a change to the database occurs.
 
 ## How to run
 
